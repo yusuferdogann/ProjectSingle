@@ -14,19 +14,17 @@ Proje oyun severlerin isini kolaylatirmak ve daha fazla keyif almalari icin alim
 #### Ekran Görüntüleri
 Projenin ekran goruntuleri
 
-https://raw.githubusercontent.com/yusuferdogann/Project-SingePage/refs/heads/main/images/ViewProject.png
-
-https://raw.githubusercontent.com/yusuferdogann/Project-SingePage/refs/heads/main/images/ViewProject2.png
-
+https://raw.githubusercontent.com/yusuferdogann/ProjectSingle/refs/heads/main/images/ViewProject.png?token=GHSAT0AAAAAACWFJAQ6X7T7BMSU67VWKD3MZ7H3HRQ
+https://raw.githubusercontent.com/yusuferdogann/ProjectSingle/refs/heads/main/images/ViewProject2.png?token=GHSAT0AAAAAACWFJAQ7VE6RJ5WRQUO4LBW4Z7H3H3A
 ##### Kurulum
 
 </> Depoyu klonla:
-
+https://github.com/yusuferdogann/ProjectSingle.git
 
 
 </> Proje dizinine gir:
-- cd proje-adi
-- VS Code Live Server 
+- cd ProjectSingle
+- VS Code Live Server eklentisini ekle ve calsitir
 
 
 
