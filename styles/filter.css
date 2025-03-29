@@ -1,0 +1,75 @@
+.filter-main{
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+        background-color: white;
+    }
+
+
+.filter-btn {
+    border: 2px solid #007bff;
+    color: #007bff;
+    background: transparent;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #BBDEFB; 
+}
+
+.filter-button{
+    display: flex; 
+    align-items: center; 
+    background-color: #3d7dc8;
+     color: black; 
+      padding: 8px 15px;
+      color: white;
+}
+
+
+
+.left-section {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:768px){
+    .filter-item:nth-child(1) { order: 2; }  
+    .filter-item:nth-child(2) { order: 1; }  
+    .filter-item:nth-child(3) { order: 2; }  
+
+     .MuiBox-root2 {
+        width: 100%;
+    }
+    .filter-button{
+        display: flex; 
+    align-items: center; 
+    background-color: #3d7dc8;
+     color: black; 
+      padding: 8px 15px;
+      color: white;
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .filter-item:nth-child(3) .filter-item:nth-child(1) {
+background-color: red;
+display: flex;
+width: 100%;
+    }
+    .filter-main{
+        flex-direction: column;
+            padding: 20px 0px;
+            background-color: white;
+        }
+}

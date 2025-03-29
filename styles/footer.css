@@ -1,0 +1,97 @@
+/* FOOTER */
+
+
+.footer-main{
+    display: flex; 
+    align-items: center; 
+    padding: 5px 10px; 
+    border: 1px solid gray; 
+    border-radius: 5px;
+}
+
+.footer-main i {
+    font-size: 1.846rem;
+    line-height: 2.5rem;
+    display: inline-block;
+    margin-right: 1.154rem;
+    vertical-align: middle;
+}
+
+ /* Footer Genel Stil */
+ .footer-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.MuiBox-root {
+    flex: 1;
+    text-align: left; /* Başlıkları sola yaslama */
+    width: 100%;
+}
+
+.MuiGrid-root {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.MuiList-root {
+    list-style: none;
+    padding: 0;
+}
+
+.hover-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 12px 0;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #4da6ff;
+}
+
+.MuiPaper-elevation3{
+    display: flex;
+     align-items: center;
+      justify-content: flex-start;
+       padding: 16px; 
+       border-radius: 8px;
+         border: 1px solid black;
+          gap: 12px;
+}
+.MuiTypography-root-sub{
+    font-size: 14px;
+     color: #666;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 15px;  
+    }
+    .MuiBox-root {
+        text-align: center;  
+        padding: 10px;  
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 10px; 
+    }
+    .MuiBox-root {
+        text-align: center;
+        padding: 5px; 
+    }
+}

@@ -1,0 +1,217 @@
+.card {
+    width: calc(16.66% - 10px);
+    height: 254px;
+    position: relative;
+    background: #f5f5f5;
+    color: #252525;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 150%;
+    box-shadow: 0px 10px 20px rgba(80, 80, 80, 0.2);
+    transition: box-shadow .3s ease-in-out;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+
+.loader {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.spinner .material-icons {
+    font-size: 40px;
+    animation: spin 1s linear infinite;
+    color: #007bff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+
+
+
+.card-info {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+
+.card-img {
+    background: #00ff88;
+    background: linear-gradient(to top, #00ff88, #61efff);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    z-index: 2;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.social-media {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0rem;
+    transform: translateY(-6em);
+    z-index: 3;
+}
+
+.social-media li {
+    background: #f5f5f5;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+
+.social-media li svg {
+    --size: 24px;
+    width: var(--size);
+    height: var(--size);
+    fill: #252525;
+}
+
+
+.title {
+    margin-bottom: -12px;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 5px 5px;
+    font-weight: normal;
+}
+
+.subtitle {
+    margin-bottom: -10px;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.material-icons.tooltipped {
+    position: relative;
+    z-index: 10;
+}
+
+
+.card:hover {
+    box-shadow: 0px 15px 30px rgba(80, 80, 80, 0.3);
+}
+
+.card:hover .card-img {
+    transform: translateY(-5em);
+}
+
+.card:hover .social-media li {
+    transform: translateY(-5%);
+    opacity: 1;
+}
+
+.card:hover .social-media li:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.card:hover .social-media li:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.card:hover .social-media li:nth-child(3) {
+    transition-delay: .2s;
+}
+
+
+
+.social-media {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.social-media li {
+    position: relative;
+    cursor: pointer;
+}
+
+.social-media li::after {
+    
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.social-media li:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; 
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+    .card {
+        width: 100% 
+    }
+    .card {
+        height: 350px;
+        
+    }
+    .title {
+        font-size: 14px;
+        padding: 5px 5px;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+    }
+}

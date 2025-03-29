@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../styles/filter.css">
+    <title>Material UI Flex Row</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class=" filter-main">
+
+            <div class="MuiTypography-root MuiTypography-h6 filter-item"
+                style="font-weight: bold; color: black;margin: 10px 0px;">
+                <label>
+                    <input type="checkbox" class="filled-in" />
+                    <span>Yalnızca Stoktakiler</span>
+                </label>
+            </div>
+            <div class="MuiBox-roo2t filter-item"
+                style="display: flex; align-items: center; background-color: #E5E7EB; border-radius: 20px; padding: 5px 10px; height: 40px; width: 100%; max-width: 400px;">
+                <span class="material-icons MuiIcon-root" style="color: gray; margin-right: 5px;">
+                    search
+                </span>
+                <input type="text" class="MuiInputBase-root MuiOutlinedInput-root" placeholder="Ara..."
+                    style="border: none; background: transparent; outline: none; width: 100%;">
+            </div>
+            <div class="MuiBox-root2 filter-item" style="display: flex; align-items: center; gap: 15px;">
+                <a class="dropdown-trigger btn filter-button" href="#" data-target="dropdown1">
+                    Filtrele
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="#">Filtre 1</a></li>
+                    <li><a href="#">Filtre 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(elems);
+        });
+    </script>
+
+</body>
+
+</html>

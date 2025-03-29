@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+
+    <title>Volorant</title>
+</head>
+
+<body>
+    <!-- Banner -->
+    <div class="banner-container">
+        <img src="images/banner.webp" alt="Banner" class="banner">
+    </div>
+
+
+    <div class="bottom-section container">
+        <div>
+            <p class="totalprice" ><i class="fas fa-lira-sign"></i>5000 TL </p>
+            <p class=" MuiTypography-root text-blue-400 priceroad  gap-1">
+                Siparişlerim 
+                <span class="material-icons road ">double_arrow</span>
+                Hesabım 
+                <span class="material-icons road">double_arrow</span>
+                Yayıncılar 
+                <span class="material-icons road">double_arrow</span>
+                İlan Ekle 
+                <span class="material-icons road" >double_arrow</span>
+                <span style="color:#00d409;font-weight: 800;">Bakiye Yükle</span>
+            </p>
+        </div>
+            
+                    
+
+        <div class="right-section">
+            <ul class="social-media-icons">
+                <li>
+                    <i class="fab fa-instagram tooltipped" data-tooltip="Instagram" aria-label="Instagram"></i>
+                </li>
+                <li>
+                    <i class="fab fa-youtube tooltipped" data-tooltip="YouTube" aria-label="YouTube"></i>
+                </li>
+                <li>
+                    <i class="fab fa-discord tooltipped" data-tooltip="Discord" aria-label="Discord"></i>
+                </li>
+                <li>
+                    <i class="fab fa-twitter tooltipped" data-tooltip="Twitter" aria-label="Twitter"></i>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-trigger btn" href="#" data-target="dropdown1" style="background-color: #3d7dc8;">
+                            Dil Seç
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="#"><img src="images/tr-flag.png" class="flag-icon"> Türkçe</a></li>
+                            <li><a href="#"><img src="images/en-flag.png" class="flag-icon"> English</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+   <div id="navbar-container"></div>
+
+    <!-- Kategori  -->
+  <div id="category-container"></div>
+
+    <!-- Slider ---- -->
+   
+    <div id="MuiBox-root11">
+        <div class="MuiGrid-root22" id="slider123">
+            <div class="slide" style="background-image: url('images/slider1.webp');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 1</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 1</div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/slider2.webp');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 2</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 2</div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/slider3.webp');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 3</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 3</div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/slider4.jpg');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 4</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 4</div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/slider5.jpg');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 5</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 5</div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/slider6.jpg');">
+                <div class="MuiTypography-root77">
+                    <div class="MuiTypography-title12">Başlık 6</div>
+                    <div class="MuiTypography-subtitle67">Alt Başlık 6</div>
+                </div>
+            </div>
+        </div>
+   
+</div>
+    <!-- description  -->
+    <div id="description-container"></div>
+
+    <!-- Filtre -->
+    <div id="filter-container"></div>
+
+    <!-- Card -->
+    <div id="card-container"></div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+<script>
+        fetch("/pages/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            })
+            .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+    fetch("/pages/card.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("card-container").innerHTML = data;
+
+          
+        })
+        .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+    fetch("/pages/description.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("description-container").innerHTML = data;
+        })
+        .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+    fetch("/pages/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+    fetch("/pages/filter.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("filter-container").innerHTML = data;
+        })
+        .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+    fetch("/pages/category.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("category-container").innerHTML = data;
+        })
+        .catch(error => console.error("Hata:", error));
+</script>
+
+<script>
+  
+  let index = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const slider = document.getElementById('MuiBox-root11');
+
+let windowWidth = window.screen.availWidth;  
+
+window.addEventListener('resize', () => {
+    windowWidth = window.screen.availWidth;
+    updateSliderPosition(); 
+});
+
+function getTranslateValue() {
+
+    return windowWidth < 768 ? 100 : 25;
+}
+
+function slideNext() {
+    const translateValue = getTranslateValue();  
+
+    index++;
+    if (index >= totalSlides) {
+        index = 0; 
+    }
+
+    slider.style.transition = 'transform 0.6s ease-in-out';
+    slider.style.transform = `translateX(-${index * translateValue}%)`;  
+}
+
+setInterval(slideNext, 3000);
+
+function updateSliderPosition() {
+    const translateValue = getTranslateValue();  
+    slider.style.transform = `translateX(-${index * translateValue}%)`;  
+}
+
+
+</script>
+<script src="./card.js"></script>
+
+</body>
+
+</html>

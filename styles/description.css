@@ -1,0 +1,42 @@
+.description-title{
+    font-size: 18px;
+    text-align: end;
+    color: black;
+    margin-bottom: 0;
+}
+.MuiTypography-h4 {
+
+}
+.desciption-main{
+    display: flex; 
+    justify-content: space-between;
+     align-items: center;
+      position: relative; 
+     z-index: 1; 
+     color: white; 
+     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+@media (max-width: 768px) {
+    .title{
+        font-size: 18px;
+        text-align: end;
+        color: black;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    .MuiTypography-h4 {
+        font-size: 30px;
+        text-align: start;
+    }
+    .description-subtitle{
+        text-align: justify !important;
+    }
+    .desciption-main{
+        flex-direction: column; 
+        
+    }
+    .description-title{
+       display: flex;
+       justify-content: center;
+    }
+}
